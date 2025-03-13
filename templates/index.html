@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qibla Compass</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Qibla Compass</h1>
+        <button id="getLocation">Get My Location</button>
+        <div id="result">
+            <p>Location: <span id="coords">Waiting for location...</span></p>
+            <p>Qibla Direction: <span id="direction">Not calculated yet</span></p>
+            <p>Device Heading: <span id="heading">Not available</span></p>
+        </div>
+        <div id="compass">
+            <div id="compass-circle">
+                <img id="kaaba" src="{{ url_for('static', filename='kaaba.png') }}" alt="Kaaba">
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
